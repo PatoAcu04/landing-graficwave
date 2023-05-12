@@ -96,6 +96,7 @@ main {
 
 #banner {
   margin-top: 100px;
+  width: 100%;
   background-color: var(--primary);
   padding: 70px 0;
   max-width: 1200px;
@@ -126,7 +127,6 @@ main {
 
 .info h1 {
   font-size: 60px;
-  min-width: 500px;
   font-weight: 100px;
 }
 
@@ -228,7 +228,7 @@ main {
 .discover-info {
   display: flex;
   justify-content: center;
-  gap: 0px;
+  gap: 0;
   padding-bottom: 50px;
 }
 
@@ -252,7 +252,7 @@ main {
 }
 
 .discover-text {
-  display: inline-block;
+  width: auto;
 }
 
 .discover-text a {
@@ -302,8 +302,6 @@ main {
 }
 
 .info-footer {
-  display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
@@ -346,7 +344,6 @@ main {
 
 .img-footer {
   display: flex;
-  flex-direction: column;
   padding: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -370,9 +367,115 @@ main {
   -webkit-text-fill-color: transparent;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .card-contenedor {
     align-items: flex-end;
-    justify-content: end;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .navbar {
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0.5px;
+  }
+
+  .opciones li:first-child {
+    display: none;
+  }
+
+  .opciones {
+    color: #fff;
+  }
+
+  .cart {
+    width: 8%;
+    height: 8%;
+  }
+
+  #banner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+    padding-top: 50px;
+    padding-bottom: 0;
+  }
+
+  .info {
+    width: 90%;
+    padding-top: 0;
+  }
+
+  .info h1 {
+    font-size: 40px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .card {
+    padding: 5px 5px;
+  }
+
+  #info h2 {
+    text-align: center;
+  }
+
+  #discover {
+    padding: 20px 0;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .discover-info {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .discover-text {
+    text-align: center;
+  }
+
+  .discover-text p {
+    padding-bottom: 20px;
+    padding-top: 10px;
+  }
+
+  .discover-info h2 {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .discover-cards {
+    display: none;
+  }
+
+  #footer {
+    max-width: 100%;
+  }
+
+  .img-footer {
+    display: none;
+  }
+
+  .info-footer h2 {
+    text-align: end;
+    max-width: 100%;
+  }
+
+  .card {
+    width: 50%;
+  }
+
+  .footer-opciones {
+    width: 100%;
+    margin-left: 50px;
   }
 }
